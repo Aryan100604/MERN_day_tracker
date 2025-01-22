@@ -15,7 +15,7 @@ const daysSchema = new mongoose.Schema(
       },
     ],
 
-    dayDesription: {
+    dayDescription: {
       type: String,
     },
   },

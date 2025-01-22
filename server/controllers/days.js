@@ -1,16 +1,17 @@
 const Day = require("../models/days");
-const addtheDay = (req, res) => {
-  const body = req.body;
-  Day.create({
-    todos: body.todoList,
-    dayDesription: body.dayDesription,
-  })
-    .then((req, res) => {
-      return res.json({ message: "Todays Entry Added" });
-    })
-    .catch((req, res) => {
-      return res.json({ message: "Oops Data is not added of today try again" });
+const addtheDay = async (req, res) => {
+  try {
+    const body = req.body;
+    await Day.create({
+      todos: body.todoList,
+      dayDescription: body.dayDescription,
     });
+
+    return res.status(201).json({ message: "Todays Entry Added" });
+  } catch (err) {
+    console.log(err);
+    return res.status(404).json({ message: "Data entry is not added" });
+  }
 };
 
 module.exports = { addtheDay };

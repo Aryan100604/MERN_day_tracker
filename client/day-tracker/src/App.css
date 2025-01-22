@@ -1,0 +1,69 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.whole-body {
+  width: 100%;
+  height: 100vh;
+  background-image: url("./assets/img.jpg");
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background: linear-gradient(180deg, rgb(125, 42, 150), rgb(19, 19, 186));
+  margin: 50px;
+  padding: 20px;
+}
+
+input {
+  width: 900px;
+  height: 50px;
+  background-color: black;
+  color: azure;
+  border: 2px solid rgb(147, 135, 135);
+  border-radius: 5px;
+  margin: 15px;
+}
+
+button {
+  width: 100px;
+  height: 40px;
+  background-color: rgb(199, 25, 147);
+  border-radius: 10px;
+  margin-left: 45%;
+}
+
+textarea {
+  width: 900px;
+  height: 100px;
+  background-color: black;
+  border-radius: 5px;
+}
+
+.card {
+  width: 200px;
+  height: 150px;
+  background-color: white;
+  border-radius: 5px;
+  margin: 5px;
+}
+.card h2 {
+  padding: 5px;
+}
+.card h4 {
+  padding: 5px;
+}
+.list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.done-btn {
+  margin: 20px 20px 20px 47px;
+
+  background-color: rgb(7, 53, 82);
+  color: white;
+}
